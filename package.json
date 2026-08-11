@@ -1,0 +1,8 @@
+{
+  "name": "xi-tkj1-class-portal",
+  "version": "3.0.0",
+  "private": true,
+  "description": "XI TKJ 1 Class Portal - frontend + Node backend",
+  "main": "server.js",
+  "scripts": {"start":"node server.js"}
+}
