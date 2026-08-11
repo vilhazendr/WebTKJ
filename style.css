@@ -229,7 +229,7 @@ body.entry-locked{
 }
 
 body.entry-locked > *:not(#entryGate){
-  filter:blur(8px)!important;
+  filter:none!important;
   transform:scale(1.015);
   transition:filter .25s ease,transform .25s ease;
 }
