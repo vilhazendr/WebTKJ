@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827"><title>Kyou Manga — XI TKJ 1</title>
+<link rel="stylesheet" href="manga.css">
+</head>
+<body>
+<header class="mnav">
+  <a class="mbrand" href="index.html">KYOU <span>MANGA</span></a>
+  <div class="msearch"><span>⌕</span><input id="mSearch" placeholder="Cari manga, manhwa, manhua..." autocomplete="off"><button id="searchBtn">Cari</button></div>
+  <div class="mnav-actions"><button id="randomBtn">🎲 Acak</button><button id="favBtn">♥ Favorit</button><a class="back" href="index.html">← Kelas</a></div>
+</header>
+<main id="app">
+<section class="mhero"><div><span class="eyebrow">KYOU MANGA HUB</span><h1>Perpustakaan manga kelas.</h1><p>MangaDex untuk chapter & reader, AniList sebagai mesin metadata/discovery. Tidak perlu API key.</p><div class="hero-actions"><button class="primary" id="trendingBtn">🔥 Populer</button><button id="historyBtn">🕘 Riwayat</button><button id="settingsBtn">⚙ Reader</button></div></div><div class="hero-art">漫画<br><small>XI TKJ 1</small></div></section>
+<section class="mtools">
+  <div><label>Sumber</label><select id="source"><option value="mangadex">MangaDex</option><option value="anilist">AniList (discovery)</option></select></div>
+  <div><label>Bahasa chapter</label><select id="language"><option value="id">🇮🇩 Indonesia</option><option value="en">🇬🇧 English</option><option value="all">🌐 Semua</option></select></div>
+  <div><label>Status</label><select id="statusFilter"><option value="">Semua status</option><option value="ongoing">Ongoing</option><option value="completed">Completed</option><option value="hiatus">Hiatus</option><option value="cancelled">Cancelled</option></select></div>
+  <div><label>Urutkan</label><select id="sortFilter"><option value="popular">Paling populer</option><option value="latest">Terbaru</option><option value="title">Judul A-Z</option></select></div>
+</section>
+<section class="msection"><div class="mheading"><h2 id="sectionTitle">Manga Populer</h2><span id="status"></span></div><div id="results" class="grid"></div></section>
+<section class="msection"><div class="mheading"><h2>Fitur</h2></div><div class="feature-grid"><article><b>🔖 Bookmark</b><p>Posisi chapter terakhir tersimpan di perangkat.</p></article><article><b>❤️ Favorit</b><p>Simpan manga favorit tanpa database eksternal.</p></article><article><b>⌨ Reader shortcut</b><p>←/→ chapter, Esc keluar, +/- zoom.</p></article><article><b>🛡️ Tanpa API key</b><p>MangaDex dan AniList dapat digunakan tanpa secret key di browser.</p></article></div></section>
+</main>
+<div id="detailModal" class="modal hidden"><div class="modal-box detail-box"><button class="x" data-close>×</button><div id="detail"></div></div></div>
+<div id="reader" class="reader hidden">
+<header class="readerbar"><button id="closeReader">← Kembali</button><strong id="readerTitle">Chapter</strong><div class="reader-controls"><button id="prevChapter">‹</button><select id="chapterSelect"></select><button id="nextChapter">›</button><button id="readerSettings">⚙</button></div></header>
+<div class="reader-sub"><span id="readerProgress">0%</span><button id="fitBtn">↔ Fit</button><button id="zoomOut">−</button><span id="zoomValue">100%</span><button id="zoomIn">＋</button><button id="bookmarkPage">🔖</button></div>
+<div id="pages" class="pages"><div class="loading">Memuat halaman...</div></div></div>
+<div id="readerModal" class="modal hidden"><div class="modal-box"><button class="x" data-close>×</button><h2>Reader Settings</h2><label class="check"><input id="darkReader" type="checkbox" checked> Dark reader</label><label class="check"><input id="doublePage" type="checkbox"> Mode halaman ganda</label><button class="primary" id="saveReader">Simpan</button></div></div>
+<div id="toast" class="toast"></div>
+<script src="manga.js"></script>
+</body></html>
