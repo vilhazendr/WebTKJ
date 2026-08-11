@@ -1,0 +1,486 @@
+{
+  "materials": [
+    {
+      "id": "linux-command",
+      "cat": "linux",
+      "tag": "Linux",
+      "icon": "🐧",
+      "title": "Linux Command Dasar",
+      "desc": "Perintah penting untuk navigasi file, membuat folder, menyalin, memindahkan, dan menghapus file.",
+      "content": "Linux menggunakan terminal sebagai salah satu cara utama mengelola sistem.\n\nPerintah penting:\nls — melihat isi direktori\ncd — berpindah direktori\npwd — melihat lokasi direktori saat ini\nmkdir — membuat direktori\ntouch — membuat file kosong\ncp — menyalin file\nmv — memindahkan atau mengganti nama\nrm — menghapus file\ncat — membaca isi file\n\nContoh:\ncd /var/www\nmkdir project\ncd project\ntouch index.html\nls -la"
+    },
+    {
+      "id": "linux-permission",
+      "cat": "linux",
+      "tag": "Linux",
+      "icon": "🔐",
+      "title": "Linux Permission & chmod",
+      "desc": "Memahami owner, group, permission rwx, chmod, chown, dan keamanan file.",
+      "content": "r = read, w = write, x = execute.\n\nContoh:\nchmod 755 script.sh\n\n755 berarti owner rwx, group r-x, dan user lain r-x.\n\nPerintah terkait:\nls -l\nchmod 644 file.txt\nchown user:group file.txt\n\nHindari chmod 777 untuk file penting."
+    },
+    {
+      "id": "linux-package",
+      "cat": "linux",
+      "tag": "Linux",
+      "icon": "📦",
+      "title": "Package Management",
+      "desc": "Mengelola aplikasi Linux menggunakan package manager seperti apt.",
+      "content": "Pada Debian/Ubuntu, package manager yang umum adalah APT.\n\nContoh:\nsudo apt update\nsudo apt upgrade\nsudo apt install nginx\nsudo apt remove nginx\napt search nginx"
+    },
+    {
+      "id": "linux-systemd",
+      "cat": "linux",
+      "tag": "Linux",
+      "icon": "⚙️",
+      "title": "Service & systemctl",
+      "desc": "Mengelola service Linux dan melihat status layanan.",
+      "content": "systemd digunakan pada banyak distro Linux modern.\n\nPerintah:\nsystemctl status nginx\nsudo systemctl start nginx\nsudo systemctl stop nginx\nsudo systemctl restart nginx\nsudo systemctl enable nginx"
+    },
+    {
+      "id": "linux-network",
+      "cat": "linux",
+      "tag": "Linux",
+      "icon": "🌐",
+      "title": "Networking Linux",
+      "desc": "Perintah ip, ping, ss, curl, dan resolusi DNS untuk troubleshooting.",
+      "content": "Perintah yang berguna:\nip addr\nip route\nping 8.8.8.8\nss -tulpn\ncurl -I https://example.com\n\nUrutan troubleshooting: interface → IP → route → DNS → aplikasi."
+    },
+    {
+      "id": "ipv4-subnet",
+      "cat": "network",
+      "tag": "Jaringan",
+      "icon": "🌐",
+      "title": "IPv4 & Subnetting",
+      "desc": "CIDR, subnet mask, network address, broadcast, dan jumlah host.",
+      "content": "CIDR menunjukkan jumlah bit network. Contoh /24 = 255.255.255.0.\n\nUntuk /24, total alamat adalah 256 dan pada subnet klasik tersedia 254 host usable.\n\nNetwork address = alamat awal subnet.\nBroadcast = alamat terakhir subnet."
+    },
+    {
+      "id": "routing-basic",
+      "cat": "network",
+      "tag": "Jaringan",
+      "icon": "📡",
+      "title": "Routing Dasar",
+      "desc": "Static route, default route, gateway, dan tabel routing.",
+      "content": "Routing menentukan ke mana paket harus dikirim.\n\nGateway = router tujuan berikutnya.\nDefault route = jalur ketika tidak ada route lebih spesifik.\nStatic route = route yang dikonfigurasi manual."
+    },
+    {
+      "id": "dhcp-dns",
+      "cat": "network",
+      "tag": "Jaringan",
+      "icon": "📶",
+      "title": "DHCP & DNS",
+      "desc": "Memahami pembagian IP otomatis dan penerjemahan nama domain.",
+      "content": "DHCP memberikan IP address, subnet mask, gateway, dan DNS secara otomatis.\n\nDNS menerjemahkan nama seperti example.com menjadi alamat IP."
+    },
+    {
+      "id": "vlan",
+      "cat": "network",
+      "tag": "Jaringan",
+      "icon": "🔀",
+      "title": "VLAN & Trunk",
+      "desc": "Membagi jaringan secara logis dan membawa beberapa VLAN melalui satu link.",
+      "content": "VLAN memisahkan broadcast domain secara logis. Access port umumnya membawa satu VLAN, sedangkan trunk dapat membawa beberapa VLAN menggunakan tagging."
+    },
+    {
+      "id": "html-basic",
+      "cat": "coding",
+      "tag": "Coding",
+      "icon": "💻",
+      "title": "HTML Dasar",
+      "desc": "Struktur dokumen HTML, semantic tags, link, image, dan form.",
+      "content": "HTML membentuk struktur halaman.\n\nGunakan elemen semantik seperti header, nav, main, section, article, dan footer."
+    },
+    {
+      "id": "css-basic",
+      "cat": "coding",
+      "tag": "Coding",
+      "icon": "🎨",
+      "title": "CSS Dasar",
+      "desc": "Selector, box model, flexbox, grid, responsive design, dan variables.",
+      "content": "CSS mengatur tampilan halaman.\n\nKonsep penting: selector, specificity, box model, flexbox, grid, media query, dan CSS variables."
+    },
+    {
+      "id": "js-basic",
+      "cat": "coding",
+      "tag": "Coding",
+      "icon": "⚡",
+      "title": "JavaScript Dasar",
+      "desc": "Variable, function, DOM, event, array, object, fetch, dan localStorage.",
+      "content": "JavaScript membuat halaman interaktif.\n\nContoh:\nconst button = document.querySelector(\"button\");\nbutton.addEventListener(\"click\", () => alert(\"Halo XI TKJ 1\"));"
+    },
+    {
+      "id": "git-basic",
+      "cat": "coding",
+      "tag": "Coding",
+      "icon": "🌿",
+      "title": "Git Dasar",
+      "desc": "Repository, commit, branch, pull, push, dan clone.",
+      "content": "Alur dasar:\ngit clone URL\ngit status\ngit add .\ngit commit -m \"update\"\ngit push"
+    },
+    {
+      "id": "web-security",
+      "cat": "security",
+      "tag": "Security",
+      "icon": "🛡️",
+      "title": "Web Security Dasar",
+      "desc": "XSS, CSRF, HTTPS, validasi input, dan keamanan password.",
+      "content": "Keamanan web dimulai dari validasi input dan prinsip least privilege. XSS berkaitan dengan input tidak tepercaya yang masuk ke HTML/JS. HTTPS melindungi data saat transit."
+    },
+    {
+      "id": "auth-security",
+      "cat": "security",
+      "tag": "Security",
+      "icon": "🔑",
+      "title": "Authentication & Session",
+      "desc": "Konsep login, password hashing, session token, dan logout.",
+      "content": "Backend sebaiknya menyimpan password sebagai hash menggunakan scrypt, bcrypt, atau Argon2. Setelah login berhasil, server memberikan session/token."
+    },
+    {
+      "id": "sql-basic",
+      "cat": "database",
+      "tag": "Database",
+      "icon": "🗄️",
+      "title": "SQL Dasar",
+      "desc": "SELECT, INSERT, UPDATE, DELETE, WHERE, ORDER BY, dan JOIN.",
+      "content": "SQL digunakan untuk mengelola data relasional.\n\nContoh:\nSELECT * FROM students;\nSELECT * FROM tasks WHERE status = 'todo';\n\nGunakan parameterized query pada backend."
+    },
+    {
+      "id": "api-basic",
+      "cat": "database",
+      "tag": "Backend",
+      "icon": "🔌",
+      "title": "REST API Dasar",
+      "desc": "Konsep endpoint, GET, POST, PUT/PATCH, DELETE, JSON, dan status code.",
+      "content": "GET /api/materials → mengambil materi\nPOST /api/materials → menambah materi\nDELETE /api/materials/:id → menghapus materi\n\nStatus umum: 200, 201, 400, 401, 404, 500."
+    }
+  ],
+  "tasks": [],
+  "announcements": [],
+  "files": [],
+  "students": [
+    {
+      "id": "stu-1",
+      "name": "Ach. Yudi",
+      "gender": "L",
+      "username": "ach.yudi.01",
+      "salt": "3b7c662bd5513e9a1aec5eb107d22448",
+      "hash": "c777fcc6ba23f1efa5776be949d0c459faedd23a26953344e8ac30498350029b74b2063e20b315a458653dd84d461c45381918d90d250a15046b8e4300b6cdb6",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-2",
+      "name": "Alfi R. F.",
+      "gender": "L",
+      "username": "alfi.r.f.02",
+      "salt": "d7b30b1a7025ae5a36ce3d1a1d38e631",
+      "hash": "8c6712b1552202d501220a868e50dd8e5e7af20ee9cb9bfed6de0fa875bdf8e6022d1727bfe8fc74a510c81de4a3ab7f0473b326eb98c200ea157edf81ab8974",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-3",
+      "name": "Alvino Adityas",
+      "gender": "L",
+      "username": "alvino.adityas.03",
+      "salt": "c95d2c73cfef710416f320f10ab06ae3",
+      "hash": "5e74271864afa43f8077469d89a1395aca99bef3d539ccd0f095ce3052d5e4be3e3d7eed8267434ccbcd007a2d194f3ee09091ee140f711ff509a0b11fa35006",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-4",
+      "name": "Alya Nur Fadilah",
+      "gender": "P",
+      "username": "alya.nur.fadilah.04",
+      "salt": "37dca034f70e3c70f0d25befa54b68b3",
+      "hash": "dd2a7aacdb7252a0f645428c7cbb3e68c80072ce0d9156a62036e377119e229914b49cbd7fa0dcac32045235e9b004aba795421ed6ab675f07d08bfd0878254c",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-5",
+      "name": "Aringga Rheza",
+      "gender": "L",
+      "username": "aringga.rheza.05",
+      "salt": "0b972ebdee128959dcdafd66385dbe9f",
+      "hash": "1d8ac4e60dcb28fa6e9aa1d1ecdb992713829f9d665b52e840c0aa6c2fcdb13b0cd6f73a19a2d369299cf92daa62a8f8e5ec8401b4fe93ec7a63a7305052c9c9",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-6",
+      "name": "Aurellia Siva A.",
+      "gender": "P",
+      "username": "aurellia.siva.a.06",
+      "salt": "cdf67277d43b3796ffdcd8fd1cb31d62",
+      "hash": "e0df5eaca6b428e2b0f8272c016ebf2a1917826967004872346a8bbd232db859fac01aff34acd474db88f740f2969e2d8ed2e103fdbf2fe29712223491d774b4",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-7",
+      "name": "Azkya Viorentina F.",
+      "gender": "P",
+      "username": "azkya.viorentina.f.07",
+      "salt": "bc6a520a0dd144097fa54d3b89f74f92",
+      "hash": "108816168673a32fee521616afa6d7721910529dc94f6892910cac6cdff6aee8296590792921aa451c987f683901cdd16081dec5fab8acdcf4d5d82c723f3468",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-8",
+      "name": "Cika Ul Umha",
+      "gender": "P",
+      "username": "cika.ul.umha.08",
+      "salt": "a6ec9be045d1c1f91fb41b8a5db081f0",
+      "hash": "162369a7d7b73bc3ec7045bb3ba590451557e99f4f120f34bf99efef28c31ba638ddf102b11a5b2d0cf655032dc68db01d191e0d05c76474ca7d43cb5eba479b",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-9",
+      "name": "Desvita Ayu S.",
+      "gender": "P",
+      "username": "desvita.ayu.s.09",
+      "salt": "d10f61828a35b3000e7e0adbc0f242fc",
+      "hash": "4a430525ec853cc3c5f2bf0d9e4a6ae1e6898ae7edb178482f9bb95ad7c1edb4b08130936d0094e3884aea295042c17b559778d4dc46fc5f504f67f114ff2441",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-10",
+      "name": "Dina Oktaviana",
+      "gender": "P",
+      "username": "dina.oktaviana.10",
+      "salt": "3eb5d3269c2d111ab73959ed185349e7",
+      "hash": "fec9c986b8c92c25ce7a427be01b9f5496d06e64de1db7ba5b13fdd41d38481a64d6152fd4617d3285b436c9092d10e503e453faf1a22b780a4a62270e250ff2",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-11",
+      "name": "Elis Nurdiyana P.",
+      "gender": "P",
+      "username": "elis.nurdiyana.p.11",
+      "salt": "57935e2faa4a861bd1ef7d04a025022f",
+      "hash": "f6f8eb2071233d58940ef23ec411bbdcf831dc4d99ecc892f7a866278a896daa15b4890c3b8ddaffaef3c841e16bd1a1bbf1825c2a524232685bafafff01e3e9",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-12",
+      "name": "Enisa Vita Agustin",
+      "gender": "P",
+      "username": "enisa.vita.agustin.12",
+      "salt": "40b57ee841c3105289d914edc666d862",
+      "hash": "b242cec2d15f00116e20cc734470bbfff569b2434e98a689fa24d43424bc5c83a609e3c68b805c57f51f372b3306f76bbe6ad9c5dd1d36ed51e7d6ada798638b",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-13",
+      "name": "Feriska Aulia M.",
+      "gender": "P",
+      "username": "feriska.aulia.m.13",
+      "salt": "24197d172d8267fa263d13e6e23a3ce4",
+      "hash": "ec2ed88b61e32162aa342bf27ad7451773860223cbc08008189ca189cf311cc8bba49383a34c42c639139f568056f1d373e61b1b9e0b9bb2264f37a22f2b7dd7",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-14",
+      "name": "Fita Dwi A.",
+      "gender": "P",
+      "username": "fita.dwi.a.14",
+      "salt": "15e7121ed76f58a6fbd930b0d6b26583",
+      "hash": "c6ed8c3eb84169be9deee5d52da0d7bc52fb42133270e879f91fab5cc20ca22026377be51eed0fe3f3937eb2d5405565c50aa1e76ea8ee5c8da994e781c5ea47",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-15",
+      "name": "Ines Afina R.",
+      "gender": "P",
+      "username": "ines.afina.r.15",
+      "salt": "0e9f6a661e791144f18f5682ca6f8a0b",
+      "hash": "3a9ad9599398b1a94ef8d544216d1e94ef2e2cb375f7f4f176e48a02fc9582a5b4686f01114e08814e15f84c3463664e7087c0b83a4c2b5e35e7efef0eac72ef",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-16",
+      "name": "Irfan Wahyu Prasetyo",
+      "gender": "L",
+      "username": "irfan.wahyu.prasetyo.16",
+      "salt": "27a67fc3e4bf0208566d0539e6f74e07",
+      "hash": "cf77f767eb0339bdded7d5c01edfbbe1320272817a0f5b01cb9d0bc452b7d9d9e579322ac5bd528cc62ed3318f292baaee823b134f18336bb95f05a6e3f453fc",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-17",
+      "name": "Kharizma Aiya A.",
+      "gender": "P",
+      "username": "kharizma.aiya.a.17",
+      "salt": "f9ec0c9dacad57e3ce2d1d2822eb0df5",
+      "hash": "6c249f561482ff6d6ec01f324235516b7ff9883a7d6147401bb36e15d6f1c30f579ef60b2a789c1708d74188cfd527529e126ffa69da263e000e6f2a546f665f",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-18",
+      "name": "Kirania Putri S.",
+      "gender": "P",
+      "username": "kirania.putri.s.18",
+      "salt": "5538023e4d0603608d5f094f81855bcd",
+      "hash": "4767495b20b2bf5f90df007dec3a1923a9ca6e1f97d89b808546ffb8a8b1f9eec9f8551650f3a5cb5366d2e8ed1c1cce094a910be18bb683536df5808bb97d40",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-19",
+      "name": "Lucky Akbar Al F.",
+      "gender": "L",
+      "username": "lucky.akbar.al.f.19",
+      "salt": "997404a93d8898bf0b0d3d86b3094e6d",
+      "hash": "a454024f23c2d384631129735e792e727aab4f66ae2d728b6a0a36957d75e2669b8e3f41c5084636e7cf914c678e2665834069414360479d26ce2fa1849c559c",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-20",
+      "name": "Marsha Aufa Nur S.",
+      "gender": "P",
+      "username": "marsha.aufa.nur.s.20",
+      "salt": "8ebeea19b337fb2ae66544a5e7778a5b",
+      "hash": "cb5907ab915a5f67fb4b38838a1ba94794fd388c2b2e9d49c8dfbe13b1c0c008308a3d655564287dfe80ff84b15409afdd9c6fb80d05736b9fd6b542ca07585b",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-21",
+      "name": "Miftakhul Huda",
+      "gender": "L",
+      "username": "miftakhul.huda.21",
+      "salt": "e47cf46660fd38fab220e5218f7b7376",
+      "hash": "7f95ace0c195c422f82dfda88c163922b0f055f31e19687855e2c5bbd6854a0759d7421de8ffbed9f301554d819bf34aedfee3004ac6c381bd4eaf34c5c1bfe8",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-22",
+      "name": "Moh. Dzul Fiqri Albaqi B.",
+      "gender": "L",
+      "username": "moh.dzul.fiqri.albaqi.b.22",
+      "salt": "fab246f41c54c47ef94c7d7c83d8e8e0",
+      "hash": "74fd58ecb6b5b27b81916faba154f58b3d034cd0413d1f57316f0febaa8e9295fa0fb859717de50e025a79a7cf5840b923458ea785e497363cd0f2a66d7622d6",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-23",
+      "name": "M. Indra S. P.",
+      "gender": "L",
+      "username": "m.indra.s.p.23",
+      "salt": "e2d3655c8d5d196c232693c0b18b8b36",
+      "hash": "6dc65f58c2941835ea4018ea855a7c0beaa8e326773066e8376b5b7b1e8551c27c6a1e53a7ab92e7e8826f7b598933a6c35eb5290d4f879a4efc0fa430c9ccd1",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-24",
+      "name": "M. Farhan Daffa",
+      "gender": "L",
+      "username": "m.farhan.daffa.24",
+      "salt": "02080e0d0b537768f128242578d6862c",
+      "hash": "1e3074fb9668d6ce9f15ccc6aba937940f2103c8c8f454e376d713f14e9cba1ef6f80f5043d264410f8fd9f2840eb321d89b8a6cb85a830584f9739d68e343f3",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-25",
+      "name": "M. Ezar Maulana M.",
+      "gender": "L",
+      "username": "m.ezar.maulana.m.25",
+      "salt": "72f4fcd598fe07f1782494caa2f53654",
+      "hash": "dee744f32bd6cc5efe2539c86d01de91b3c2f02cc9bc941ed5d8df3b74183475afe8b05bfc6ea4aa0f67955c7e6274dc8c01122dca05eb1f972440aea40c1516",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-26",
+      "name": "M. Imam V.",
+      "gender": "L",
+      "username": "m.imam.v.26",
+      "salt": "f68cf8f920f06b7517e9b753b140f337",
+      "hash": "5d659e4f14fe259d1c2a25de1dff5a55d04a9362da11c799703d8deb06599488a4c1a14b75b867da9c791d2f9d7dbb44d62115b68874ac0c1a8b13f311bee1ce",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-27",
+      "name": "Naila Naswa D.",
+      "gender": "P",
+      "username": "naila.naswa.d.27",
+      "salt": "ffdf03e8dacbef9cd995286ca6e70840",
+      "hash": "4ba01b919d2755a7f7be0c7ba47918476e1f0b9fadcf307aced4951235d0081b0b08cc7f2b830d36c3928f6f43f7e98798dfcd5961a5485b77ae94a8f465635b",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-28",
+      "name": "Neneng Anjarwati",
+      "gender": "P",
+      "username": "neneng.anjarwati.28",
+      "salt": "c7743bb118306e4138a64d986e777d55",
+      "hash": "31c9bacb9240193100df72843d4fef8a0966d34daa90853821dc311c60e7c4dd9cb73270748edd20b5e68c19905d59c5a4926a52fd8f19e97f56836f4365850a",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-29",
+      "name": "Noval Dwi Alvino",
+      "gender": "L",
+      "username": "noval.dwi.alvino.29",
+      "salt": "7fdd877ef1e24d9e380823265bd70019",
+      "hash": "bdab81fce59093f968dc51fe90580d711905f33e82a217f162c21e84c94450039d310be754bd2f7be5f554d89382b7b83abe0dbfbbe233a3924a7049e7000ec6",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-30",
+      "name": "Nurissadiyah Ika F.",
+      "gender": "P",
+      "username": "nurissadiyah.ika.f.30",
+      "salt": "a357957777336b9eb5e836955df9f8db",
+      "hash": "cd592b19ab67274dde1da5c5ef1397fb488aa49a2b455b1eac914068b1cf1e4611d1530cc990f2df24fd95445ebce98ed7ff1b51e925051f5564fa2ef05ba5c5",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-31",
+      "name": "Putri Ridia Artika S.",
+      "gender": "P",
+      "username": "putri.ridia.artika.s.31",
+      "salt": "822ffa10c602ee5744087b35efee0903",
+      "hash": "88e8763903536420aa09555e43412168159021a3254b8b8878f8275eab8d70d0822023fd793e2bb6d9a035b63489c602de4de69e50dd53a9d4c62d96b63cd317",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-32",
+      "name": "Reyhana Zema Z.",
+      "gender": "P",
+      "username": "reyhana.zema.z.32",
+      "salt": "d960172e98b451aa7ffbfedd84fce304",
+      "hash": "d93de0ee906ef2d3947d5b047713d125eb261c54b41ca08e1644b383958359dad53d2eae484fafa2b0b2ef2864feebb77154b6141abc46747854d40a646feebb",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-33",
+      "name": "Risma Fitri Amelia",
+      "gender": "P",
+      "username": "risma.fitri.amelia.33",
+      "salt": "9520892d9254b3569d963cead9d3cac2",
+      "hash": "cd0ccda09b777a79986c2e77e165a7c56bc1d46839ce4ae08d206dc371cf2f24b767331dae904c717088fe870072a77215037fbf0cfdfdfc318020bbbeff1b7f",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-34",
+      "name": "Savira Aulia Dias A.",
+      "gender": "P",
+      "username": "savira.aulia.dias.a.34",
+      "salt": "cae1dea1421a456b7f3fb4a88b946960",
+      "hash": "7d80b8ece19d27250d2a451d885b6c2f9a8c0521e9f85256490a45ad67b669383d8d895eb03cb0abee54b2024413dbdc609c642c781114b99709d1505d7bd8a4",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-35",
+      "name": "Shela Febriyanti",
+      "gender": "P",
+      "username": "shela.febriyanti.35",
+      "salt": "8d171e708e804e67993b0e332ef1655f",
+      "hash": "01122baeb9bb531b35f2f32bec6ca21a18f82cef574f351d0ed6288139a43579d412e40c1865190279f12aae142d985748920ddb1374b2a496db71109a105248",
+      "mustChangePassword": true
+    },
+    {
+      "id": "stu-36",
+      "name": "Vega Aulia Renata",
+      "gender": "P",
+      "username": "vega.aulia.renata.36",
+      "salt": "46e37f6ca13918b5823ae41b79b09aca",
+      "hash": "0b3ae8fbbf226eec6b06f7132bfa6336631ad90daee98a7a3dc5a1872da6e98869f40a6d347991b4c78cd614a0e0e5964abb1221fee6cc2c88a6a7c196d00d32",
+      "mustChangePassword": true
+    }
+  ]
+}
